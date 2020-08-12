@@ -5,6 +5,11 @@ class ApplicationController < Sinatra::Base
   end
 
   # code actions here!
+
+  get '/recipes/new' do
+    erb :new
+  end
+
   get '/' do
     redirect to '/recipes'
   end
@@ -12,10 +17,6 @@ class ApplicationController < Sinatra::Base
   get '/recipes' do
     @recipes = Recipe.all
     erb :index
-  end
-
-  get '/recipes/new' do
-    erb :new
   end
 
   post '/recipes' do
