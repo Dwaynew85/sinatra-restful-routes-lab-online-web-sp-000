@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
 
   # code actions here!
 
-  get '/recipes/new' do
+  get '/recipes/new' do #loads new form
     erb :new
   end
 
