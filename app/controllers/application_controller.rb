@@ -10,9 +10,9 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  # get '/' do
-  #   redirect to '/recipes'
-  # end
+  get '/' do
+    redirect to '/recipes'
+  end
 
   get '/recipes' do
     @recipes = Recipe.all
